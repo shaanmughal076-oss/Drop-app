@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --bg-sky: #dfe8f2;
+  --gold: #d49b27;
+  --gold-deep: #9a6b10;
+  --teal: #15803d;
+  --emerald: #10b981;
+  --ink: #0f172a;
+  --slate: #475569;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #dce5ef;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  user-select: none;
+}
+
+.font-brand {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes orbit-cursor-glide {
+  0%, 100% {
+    transform: translateX(-12px);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+}
+
+.animate-orbit-glide {
+  animation: orbit-cursor-glide 2.4s ease-in-out infinite;
+}
+
+@keyframes tutorial-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-tutorial-enter {
+  animation: tutorial-enter 0.28s ease-out forwards;
+}
+
